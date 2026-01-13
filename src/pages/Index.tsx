@@ -2,25 +2,34 @@ import { Truck, Package, Clock, Shield, MapPin, Phone } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import heroImage from "@/assets/hero-transport.jpg";
 
+const scrollToSection = (sectionId: string) => {
+  const element = document.getElementById(sectionId);
+  if (element) {
+    element.scrollIntoView({ behavior: "smooth", block: "start" });
+  }
+};
+
 const Navbar = () => (
   <nav className="fixed top-0 left-0 right-0 z-50 glass-card border-b border-border/30">
     <div className="container mx-auto px-6 py-4 flex items-center justify-between">
-      <div className="flex items-center gap-3">
+      <div className="flex items-center gap-3 cursor-pointer" onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })}>
         <div className="w-10 h-10 rounded-lg accent-gradient flex items-center justify-center">
           <Truck className="w-6 h-6 text-primary-foreground" />
         </div>
         <span className="font-display text-xl font-bold">SKINNER TRANSPORT</span>
       </div>
       <div className="hidden md:flex items-center gap-8">
-        <a href="#services" className="text-muted-foreground hover:text-foreground transition-colors">Services</a>
-        <a href="#quote" className="text-muted-foreground hover:text-foreground transition-colors">Get Quote</a>
-        <a href="#drivers" className="text-muted-foreground hover:text-foreground transition-colors">Drive With Us</a>
-        <a href="#contact" className="text-muted-foreground hover:text-foreground transition-colors">Contact</a>
+        <button onClick={() => scrollToSection("services")} className="text-muted-foreground hover:text-foreground transition-colors">Services</button>
+        <button onClick={() => scrollToSection("quote")} className="text-muted-foreground hover:text-foreground transition-colors">Get Quote</button>
+        <button onClick={() => scrollToSection("drivers")} className="text-muted-foreground hover:text-foreground transition-colors">Drive With Us</button>
+        <button onClick={() => scrollToSection("contact")} className="text-muted-foreground hover:text-foreground transition-colors">Contact</button>
       </div>
-      <Button variant="hero" size="sm">
-        <Phone className="w-4 h-4" />
-        Call Now
-      </Button>
+      <a href="tel:+15551234567">
+        <Button variant="hero" size="sm">
+          <Phone className="w-4 h-4" />
+          Call Now
+        </Button>
+      </a>
     </div>
   </nav>
 );
@@ -54,11 +63,11 @@ const HeroSection = () => (
         </p>
         
         <div className="flex flex-wrap gap-4 animate-fade-in" style={{ animationDelay: "0.3s" }}>
-          <Button variant="hero" size="xl">
+          <Button variant="hero" size="xl" onClick={() => scrollToSection("quote")}>
             Get Instant Quote
           </Button>
-          <Button variant="heroOutline" size="xl">
-            Track Shipment
+          <Button variant="heroOutline" size="xl" onClick={() => scrollToSection("drivers")}>
+            Join Our Team
           </Button>
         </div>
         
@@ -259,7 +268,7 @@ const DriversSection = () => (
             ))}
           </ul>
           
-          <Button variant="hero" size="lg">
+          <Button variant="hero" size="lg" onClick={() => scrollToSection("drivers")}>
             Apply Now
           </Button>
         </div>
@@ -329,20 +338,20 @@ const Footer = () => (
         <div>
           <h4 className="font-display font-bold mb-4">Services</h4>
           <ul className="space-y-2 text-sm text-muted-foreground">
-            <li><a href="#" className="hover:text-foreground transition-colors">Full Truckload</a></li>
-            <li><a href="#" className="hover:text-foreground transition-colors">LTL Shipping</a></li>
-            <li><a href="#" className="hover:text-foreground transition-colors">Express Delivery</a></li>
-            <li><a href="#" className="hover:text-foreground transition-colors">Secure Transport</a></li>
+            <li><button onClick={() => scrollToSection("services")} className="hover:text-foreground transition-colors">Full Truckload</button></li>
+            <li><button onClick={() => scrollToSection("services")} className="hover:text-foreground transition-colors">LTL Shipping</button></li>
+            <li><button onClick={() => scrollToSection("services")} className="hover:text-foreground transition-colors">Express Delivery</button></li>
+            <li><button onClick={() => scrollToSection("services")} className="hover:text-foreground transition-colors">Secure Transport</button></li>
           </ul>
         </div>
         
         <div>
           <h4 className="font-display font-bold mb-4">Company</h4>
           <ul className="space-y-2 text-sm text-muted-foreground">
-            <li><a href="#" className="hover:text-foreground transition-colors">About Us</a></li>
-            <li><a href="#" className="hover:text-foreground transition-colors">Careers</a></li>
-            <li><a href="#" className="hover:text-foreground transition-colors">News</a></li>
-            <li><a href="#" className="hover:text-foreground transition-colors">Contact</a></li>
+            <li><button onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })} className="hover:text-foreground transition-colors">About Us</button></li>
+            <li><button onClick={() => scrollToSection("drivers")} className="hover:text-foreground transition-colors">Careers</button></li>
+            <li><button onClick={() => scrollToSection("quote")} className="hover:text-foreground transition-colors">Get Quote</button></li>
+            <li><button onClick={() => scrollToSection("contact")} className="hover:text-foreground transition-colors">Contact</button></li>
           </ul>
         </div>
         
@@ -351,8 +360,8 @@ const Footer = () => (
           <ul className="space-y-2 text-sm text-muted-foreground">
             <li>1234 Transport Way</li>
             <li>Los Angeles, CA 90001</li>
-            <li className="text-primary">+1 (555) 123-4567</li>
-            <li className="text-primary">dispatch@skinnertransport.com</li>
+            <li><a href="tel:+15551234567" className="text-primary hover:text-primary/80 transition-colors">+1 (555) 123-4567</a></li>
+            <li><a href="mailto:dispatch@skinnertransport.com" className="text-primary hover:text-primary/80 transition-colors">dispatch@skinnertransport.com</a></li>
           </ul>
         </div>
       </div>
