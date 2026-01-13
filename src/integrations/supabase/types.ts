@@ -14,7 +14,84 @@ export type Database = {
   }
   public: {
     Tables: {
-      [_ in never]: never
+      driver_applications: {
+        Row: {
+          cdl_class: string
+          created_at: string
+          email: string
+          full_name: string
+          id: string
+          phone: string
+          status: string
+          updated_at: string
+          years_experience: string
+        }
+        Insert: {
+          cdl_class: string
+          created_at?: string
+          email: string
+          full_name: string
+          id?: string
+          phone: string
+          status?: string
+          updated_at?: string
+          years_experience: string
+        }
+        Update: {
+          cdl_class?: string
+          created_at?: string
+          email?: string
+          full_name?: string
+          id?: string
+          phone?: string
+          status?: string
+          updated_at?: string
+          years_experience?: string
+        }
+        Relationships: []
+      }
+      quotes: {
+        Row: {
+          cargo_description: string | null
+          created_at: string
+          delivery_location: string
+          email: string
+          full_name: string
+          id: string
+          phone: string
+          pickup_location: string
+          service_type: string
+          status: string
+          updated_at: string
+        }
+        Insert: {
+          cargo_description?: string | null
+          created_at?: string
+          delivery_location: string
+          email: string
+          full_name: string
+          id?: string
+          phone: string
+          pickup_location: string
+          service_type: string
+          status?: string
+          updated_at?: string
+        }
+        Update: {
+          cargo_description?: string | null
+          created_at?: string
+          delivery_location?: string
+          email?: string
+          full_name?: string
+          id?: string
+          phone?: string
+          pickup_location?: string
+          service_type?: string
+          status?: string
+          updated_at?: string
+        }
+        Relationships: []
+      }
     }
     Views: {
       [_ in never]: never

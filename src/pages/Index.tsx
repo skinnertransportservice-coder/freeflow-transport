@@ -9,7 +9,7 @@ const Navbar = () => (
         <div className="w-10 h-10 rounded-lg accent-gradient flex items-center justify-center">
           <Truck className="w-6 h-6 text-primary-foreground" />
         </div>
-        <span className="font-display text-xl font-bold">SKINNER</span>
+        <span className="font-display text-xl font-bold">SKINNER TRANSPORT</span>
       </div>
       <div className="hidden md:flex items-center gap-8">
         <a href="#services" className="text-muted-foreground hover:text-foreground transition-colors">Services</a>
@@ -319,7 +319,7 @@ const Footer = () => (
             <div className="w-10 h-10 rounded-lg accent-gradient flex items-center justify-center">
               <Truck className="w-6 h-6 text-primary-foreground" />
             </div>
-            <span className="font-display text-xl font-bold">SKINNER</span>
+            <span className="font-display text-xl font-bold">SKINNER TRANSPORT</span>
           </div>
           <p className="text-muted-foreground text-sm mb-4">
             Your trusted partner in logistics and freight transportation across the nation.
