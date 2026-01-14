@@ -361,8 +361,8 @@ const Footer = () => (
         <div>
           <h4 className="font-display font-bold mb-4">Contact</h4>
           <ul className="space-y-2 text-sm text-muted-foreground">
-            <li>1234 Transport Way</li>
-            <li>Los Angeles, CA 90001</li>
+            <li> 3029 vic melbourne </li>
+            <li>Melbourne, Victoria 3029</li>
             <li>
               <a 
                 href="https://wa.me/61480806325" 
@@ -379,7 +379,7 @@ const Footer = () => (
       </div>
       
       <div className="pt-8 border-t border-border/30 text-center text-sm text-muted-foreground">
-        <p>© 2024 Skinner Transport Service. All rights reserved.</p>
+        <p>© 2025 Skinner Transport Service. All rights reserved.</p>
       </div>
     </div>
   </footer>
