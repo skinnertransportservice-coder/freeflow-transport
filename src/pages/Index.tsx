@@ -24,12 +24,15 @@ const Navbar = () => (
         <button onClick={() => scrollToSection("drivers")} className="text-muted-foreground hover:text-foreground transition-colors">Drive With Us</button>
         <button onClick={() => scrollToSection("contact")} className="text-muted-foreground hover:text-foreground transition-colors">Contact</button>
       </div>
-      <a href="tel:+15551234567">
-        <Button variant="hero" size="sm">
-          <Phone className="w-4 h-4" />
-          Call Now
-        </Button>
-      </a>
+       <a 
+    href="https://wa.me/61480806325" 
+    target="_blank" 
+    rel="noopener noreferrer"
+    className="text-primary hover:text-primary/80 transition-colors flex items-center gap-2"
+  >
+    <WhatsAppIcon className="w-5 h-5" /> {/* If using an icon component */}
+    +61 480 806 325
+  </a>
     </div>
   </nav>
 );
