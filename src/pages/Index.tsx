@@ -360,8 +360,17 @@ const Footer = () => (
           <ul className="space-y-2 text-sm text-muted-foreground">
             <li>1234 Transport Way</li>
             <li>Los Angeles, CA 90001</li>
-            <li><a href="tel:+15551234567" className="text-primary hover:text-primary/80 transition-colors">+1 (555) 123-4567</a></li>
-            <li><a href="mailto:dispatch@skinnertransport.com" className="text-primary hover:text-primary/80 transition-colors">dispatch@skinnertransport.com</a></li>
+           <li>
+  <a 
+    href="https://wa.me/61480806325" 
+    target="_blank" 
+    rel="noopener noreferrer"
+    className="text-primary hover:text-primary/80 transition-colors"
+  >
+    WhatsApp: +61 480 806 325
+  </a>
+</li>
+            <li><a href="mailto:skinnertransportservice@gmail.com" className="text-primary hover:text-primary/80 transition-colors">dispatch@skinnertransport.com</a></li>
           </ul>
         </div>
       </div>
