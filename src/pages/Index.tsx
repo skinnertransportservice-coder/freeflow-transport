@@ -1,4 +1,4 @@
-import { Truck, Package, Clock, Shield, MapPin, Phone } from "lucide-react";
+import { Truck, Package, Clock, Shield, MapPin, MessageCircle } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import heroImage from "@/assets/hero-transport.jpg";
 
@@ -24,15 +24,15 @@ const Navbar = () => (
         <button onClick={() => scrollToSection("drivers")} className="text-muted-foreground hover:text-foreground transition-colors">Drive With Us</button>
         <button onClick={() => scrollToSection("contact")} className="text-muted-foreground hover:text-foreground transition-colors">Contact</button>
       </div>
-       <a 
-    href="https://wa.me/61480806325" 
-    target="_blank" 
-    rel="noopener noreferrer"
-    className="text-primary hover:text-primary/80 transition-colors flex items-center gap-2"
-  >
-    <WhatsAppIcon className="w-5 h-5" /> {/* If using an icon component */}
-    +61 480 806 325
-  </a>
+      <a 
+        href="https://wa.me/61480806325" 
+        target="_blank" 
+        rel="noopener noreferrer"
+        className="text-primary hover:text-primary/80 transition-colors flex items-center gap-2"
+      >
+        <MessageCircle className="w-5 h-5" />
+        +61 480 806 325
+      </a>
     </div>
   </nav>
 );
@@ -363,17 +363,17 @@ const Footer = () => (
           <ul className="space-y-2 text-sm text-muted-foreground">
             <li>1234 Transport Way</li>
             <li>Los Angeles, CA 90001</li>
-           <li>
-  <a 
-    href="https://wa.me/61480806325" 
-    target="_blank" 
-    rel="noopener noreferrer"
-    className="text-primary hover:text-primary/80 transition-colors"
-  >
-    WhatsApp: +61 480 806 325
-  </a>
-</li>
-            <li><a href="mailto:skinnertransportservice@gmail.com" className="text-primary hover:text-primary/80 transition-colors">dispatch@skinnertransport.com</a></li>
+            <li>
+              <a 
+                href="https://wa.me/61480806325" 
+                target="_blank" 
+                rel="noopener noreferrer"
+                className="text-primary hover:text-primary/80 transition-colors"
+              >
+                WhatsApp: +61 480 806 325
+              </a>
+            </li>
+            <li><a href="mailto:skinnertransportservice@gmail.com" className="text-primary hover:text-primary/80 transition-colors">skinnertransportservice@gmail.com</a></li>
           </ul>
         </div>
       </div>
